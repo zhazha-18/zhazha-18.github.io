@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小宅博客</title>
+  
+  <subtitle>小宅</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://wjpas.top/"/>
+  <updated>2020-06-28T09:22:05.197Z</updated>
+  <id>http://wjpas.top/</id>
+  
+  <author>
+    <name>王先生-</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://wjpas.top/2020/06/28/test/"/>
+    <id>http://wjpas.top/2020/06/28/test/</id>
+    <published>2020-06-28T09:00:35.000Z</published>
+    <updated>2020-06-28T09:22:05.197Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;文章测试&quot;&gt;&lt;a href=&quot;#文章测试&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="-test" scheme="http://wjpas.top/tags/test/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://wjpas.top/2020/06/28/hello-world/"/>
+    <id>http://wjpas.top/2020/06/28/hello-world/</id>
+    <published>2020-06-28T08:02:17.373Z</published>
+    <updated>2020-06-28T08:02:17.373Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>

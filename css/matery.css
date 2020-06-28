@@ -264,9 +264,9 @@ mark {
 .container .row {
     margin-bottom: 0;
 }
-
+/*修改主题颜色*/
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #2f2c30 0%, #561cb2 100%);
 }
 
 .text-color {
@@ -276,13 +276,13 @@ mark {
 .white-color {
     color: #fff;
 }
-
+/*修改下面划线*/
 .progress-bar {
     height: 4px;
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #ffff08 0%, #30ffff 100%);
     opacity: 0.8;
 }
 
