@@ -306,10 +306,23 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = 'f6e0a1e2ac41945a9aa7ff8a8aaa0cebc12a3bcc981a929ad5cf810a090e11ae';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3612597965,1770541226&fm=26&gp=0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -432,13 +445,22 @@
                     <div class="article-tag">
                         
                             <a href="/tags/test/">
-                                <span class="chip bg-color">-test</span>
+                                <span class="chip bg-color">test</span>
                             </a>
                         
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/bootstrap/" class="post-category">
+                                bootstrap
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -454,14 +476,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-06-28
+                    2020-06-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    38
+                    88
                 </div>
                 
 
@@ -483,7 +505,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="文章测试"><a href="#文章测试" class="headerlink" title="文章测试"></a>文章测试</h4><p>​<code>@MapperScan(&quot;com.bit.urms_supplier.mapper&quot;)
+                <h4 id="文章测试"><a href="#文章测试" class="headerlink" title="文章测试"></a>文章测试</h4><p>​<code>@MapperScan("com.bit.urms_supplier.mapper")
 @SpringBootApplication
 ​</code><br><em>sss斜体</em><br><strong>粗体</strong><br><strong><em>加粗斜体</em></strong><br><del>删除线</del></p>
 <blockquote>
@@ -491,8 +513,26 @@
 </blockquote>
 <p><code>行内代码</code></p>
 <p><a href="https://blog.csdn.net/wsmrzx/article/details/81478945" target="_blank" rel="noopener">示例链接</a></p>
-<p>例如：<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1593346070989&di=5dc46ec638ad054a784ea6255b89216c&imgtype=0&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D3885109978%2C829038721%26fm%3D214%26gp%3D0.jpg" alt="示例图片"></p>
-
+<p>例如：<img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1593346070989&amp;di=5dc46ec638ad054a784ea6255b89216c&amp;imgtype=0&amp;src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D3885109978%2C829038721%26fm%3D214%26gp%3D0.jpg" alt="示例图片"></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -556,7 +596,7 @@
                         <div class="article-tag">
                             
                                 <a href="/tags/test/">
-                                    <span class="chip bg-color">-test</span>
+                                    <span class="chip bg-color">test</span>
                                 </a>
                             
                         </div>
@@ -708,6 +748,33 @@
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '1715fa11e2714e58c02f',
+        clientSecret: '1b4beb1faecded858d4f841690df6771bddaf2ca',
+        repo: 'zhazha-18.github.io',
+        owner: 'zhazha-18',
+        admin: "zhazha-18",
+        id: '2020-06-28T17-00-35',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
 
     
 
@@ -724,44 +791,46 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/06/28/test/">
+                <a href="/2020/06/29/jie-xi-xml/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="test">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="解析Xml">
                         
-                        <span class="card-title">test</span>
+                        <span class="card-title">解析Xml</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            用于测试博客文章
+                            使用JAXBContext将Xml转换成对象
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-29
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            王先生-
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/xml/" class="post-category">
+                                    xml
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/test/">
-                        <span class="chip bg-color">-test</span>
+                    <a href="/tags/xml-%EF%BC%8C-springboot-%EF%BC%8C-JAXBContext/">
+                        <span class="chip bg-color">xml ， springboot ， JAXBContext</span>
                     </a>
                     
                 </div>
@@ -1005,7 +1074,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">111</span>&nbsp;字
+                class="white-color">524</span>&nbsp;字
             
             
             
@@ -1052,10 +1121,6 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
     </div>
@@ -1127,6 +1192,11 @@ $(function () {
 
     
 
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="150"
+        src="/libs/background/canvas-nest.js"></script>
     
 
     

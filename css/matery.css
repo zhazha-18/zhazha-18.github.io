@@ -580,7 +580,7 @@ header .go-back i {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
 }
-
+/*修改主题遮挡层颜色*/
 .bg-cover:before,
 .bg-cover:after {
     position: absolute;

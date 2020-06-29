@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, 小宅博客">
+    <meta name="keywords" content="解析Xml, 小宅博客">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | 小宅博客</title>
+    <title>解析Xml | 小宅博客</title>
     <link rel="icon" type="image/jpeg" href="/medias/ews.jpg">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -322,12 +322,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">解析Xml</h1>
                 </div>
             </div>
         </div>
@@ -442,12 +442,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/xml-%EF%BC%8C-springboot-%EF%BC%8C-JAXBContext/">
+                                <span class="chip bg-color">xml ， springboot ， JAXBContext</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/xml/" class="post-category">
+                                xml
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -456,21 +469,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-28
+                    2020-06-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-06-28
+                    2020-06-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    73
+                    363
                 </div>
                 
 
@@ -492,20 +505,71 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+                <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>做webservice的时候要解析xml，通过查找发先JAXB是可以解析xml并转换成对象的</p>
+<pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@XmlAccessorType</span><span class="token punctuation">(</span>XmlAccessType<span class="token punctuation">.</span>FIELD<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@XmlType</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"标签名称"</span><span class="token punctuation">,</span> propOrder<span class="token operator">=</span><span class="token punctuation">{</span>属性名称<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@XmlRootElement</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OrderRequestMsgHeader</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
+      *@XmlElement里面的name跟xml里面的标签对应
+      */</span>
+    <span class="token annotation punctuation">@XmlElement</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"msgHeader"</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> MsgHeader msgHeader<span class="token punctuation">;</span>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+    <span class="token annotation punctuation">@XmlElement</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"ORDER_CODE"</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String orderCode<span class="token punctuation">;</span>
+    <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="MsgHeader类："><a href="#MsgHeader类：" class="headerlink" title="MsgHeader类："></a>MsgHeader类：</h4><pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@XmlAccessorType</span><span class="token punctuation">(</span>XmlAccessType<span class="token punctuation">.</span>FIELD<span class="token punctuation">)</span>
+<span class="token annotation punctuation">@XmlType</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"msgHeader"</span><span class="token punctuation">,</span> propOrder<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">"USERNAME"</span><span class="token punctuation">,</span><span class="token string">"PAGESIZE"</span><span class="token punctuation">,</span><span class="token string">"CURRENT_PAGE"</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token annotation punctuation">@XmlRootElement</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"msgHeader"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MsgHeader</span> <span class="token punctuation">{</span>
+    <span class="token annotation punctuation">@XmlElement</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"USERNAME"</span><span class="token punctuation">,</span>required <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String USERNAME<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@XmlElement</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"PAGESIZE"</span><span class="token punctuation">,</span>required <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String PAGESIZE<span class="token punctuation">;</span>
+    <span class="token annotation punctuation">@XmlElement</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"CURRENT_PAGE"</span><span class="token punctuation">,</span>required <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">)</span>
+    <span class="token keyword">private</span> String CURRENT_PAGE<span class="token punctuation">;</span>
+    <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span></code></pre>
+<h4 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h4><p>这是传过来的xml格式的数据，标签中orderRequestMsgHeader对应的是@XmlType中的name,msgHeader对应的就是@XmlElement中的名称</p>
+<pre class=" language-java"><code class="language-java">String xml<span class="token operator">=</span><span class="token string">"&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"</span> <span class="token operator">+</span>
+                <span class="token string">"&lt;orderRequestMsgHeader>\r"</span><span class="token operator">+</span>
+                <span class="token string">"&lt;msgHeader>\r"</span> <span class="token operator">+</span> 
+                <span class="token string">"&lt;USERNAME>***有限公司&lt;/USERNAME>\r"</span> <span class="token operator">+</span> 
+                <span class="token string">"&lt;PAGESIZE>50&lt;/PAGESIZE>\r"</span> <span class="token operator">+</span> 
+                <span class="token string">"&lt;CURRENT_PAGE>1&lt;/CURRENT_PAGE>\r"</span> <span class="token operator">+</span> 
+                <span class="token string">"&lt;/msgHeader>\r"</span><span class="token operator">+</span>
+                <span class="token string">"&lt;ORDER_CODE>000051&lt;/ORDER_CODE>\r"</span> 
+                <span class="token string">"&lt;/orderRequestMsgHeader>"</span><span class="token punctuation">;</span></code></pre>
+<p>通过JAXB解析Xml文件</p>
+<h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><pre class=" language-java"><code class="language-java">OrderRequestMsgHeader header<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">OrderRequestMsgHeader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//要转换未的类信息</span>
+            JAXBContext jaxbContext <span class="token operator">=</span> JAXBContext<span class="token punctuation">.</span><span class="token function">newInstance</span><span class="token punctuation">(</span>OrderRequestMsgHeader<span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//创建JAXBContext对象，注意一定要传@XmlRootElement的所标记的类的类型</span>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+            Unmarshaller unmarshaller <span class="token operator">=</span> jaxbContext<span class="token punctuation">.</span><span class="token function">createUnmarshaller</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//拿到xml解析对象</span>
+            StringReader sr <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">StringReader</span><span class="token punctuation">(</span>xml<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            header <span class="token operator">=</span> <span class="token punctuation">(</span>OrderRequestMsgHeader<span class="token punctuation">)</span>unmarshaller<span class="token punctuation">.</span><span class="token function">unmarshal</span><span class="token punctuation">(</span>sr<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//转换后的对象信息</span>
+            <span class="token punctuation">]</span></code></pre>
+<p>解析后的header：<code>OrderRequestMsgHeader [msgHeader=MsgHeader{ USERNAME='纸业有限公司', SUBMITDATE='2020-01-01 12:12:12', PAGESIZE='50', CURRENT_PAGE='1', }, orderCode=000051</code></p>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
             </div>
             <hr/>
 
@@ -530,7 +594,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://wjpas.top/2020/06/28/hello-world/">http://wjpas.top/2020/06/28/hello-world/</a>
+                    <a href="http://wjpas.top/2020/06/29/jie-xi-xml/">http://wjpas.top/2020/06/29/jie-xi-xml/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -567,7 +631,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/xml-%EF%BC%8C-springboot-%EF%BC%8C-JAXBContext/">
+                                    <span class="chip bg-color">xml ， springboot ， JAXBContext</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -736,7 +804,7 @@
         repo: 'zhazha-18.github.io',
         owner: 'zhazha-18',
         admin: "zhazha-18",
-        id: '2020-06-28T16-02-17',
+        id: '2020-06-29T10-15-12',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -760,9 +828,60 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2020/06/29/jie-xi-xml/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="解析Xml">
+                        
+                        <span class="card-title">解析Xml</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            使用JAXBContext将Xml转换成对象
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/xml/" class="post-category">
+                                    xml
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/xml-%EF%BC%8C-springboot-%EF%BC%8C-JAXBContext/">
+                        <span class="chip bg-color">xml ， springboot ， JAXBContext</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/06/28/test/">
                     <div class="card-image">
@@ -779,9 +898,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -802,44 +921,6 @@
                     </a>
                     
                 </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/06/28/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-28
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            王先生-
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
             </div>
         </div>

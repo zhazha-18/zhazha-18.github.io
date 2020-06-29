@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wjpas.top/"/>
-  <updated>2020-06-28T09:22:05.197Z</updated>
+  <updated>2020-06-29T02:25:31.449Z</updated>
   <id>http://wjpas.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>解析Xml</title>
+    <link href="http://wjpas.top/2020/06/29/jie-xi-xml/"/>
+    <id>http://wjpas.top/2020/06/29/jie-xi-xml/</id>
+    <published>2020-06-29T02:15:12.000Z</published>
+    <updated>2020-06-29T02:25:31.449Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h4&gt;&lt;p&gt;做webservice的时候要解析xml，通过查找发先JAXB是可以解析xml并转换成对象的&lt;/p&gt;
+&lt;pre class=&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="xml" scheme="http://wjpas.top/categories/xml/"/>
+    
+    
+      <category term="xml ， springboot ， JAXBContext" scheme="http://wjpas.top/tags/xml-%EF%BC%8C-springboot-%EF%BC%8C-JAXBContext/"/>
+    
+  </entry>
+  
+  <entry>
     <title>test</title>
     <link href="http://wjpas.top/2020/06/28/test/"/>
     <id>http://wjpas.top/2020/06/28/test/</id>
     <published>2020-06-28T09:00:35.000Z</published>
-    <updated>2020-06-28T09:22:05.197Z</updated>
+    <updated>2020-06-29T02:10:35.999Z</updated>
     
     <summary type="html">
     
@@ -36,8 +64,10 @@
     </summary>
     
     
+      <category term="bootstrap" scheme="http://wjpas.top/categories/bootstrap/"/>
     
-      <category term="-test" scheme="http://wjpas.top/tags/test/"/>
+    
+      <category term="test" scheme="http://wjpas.top/tags/test/"/>
     
   </entry>
   

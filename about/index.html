@@ -329,7 +329,7 @@
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: ['从来没有真正的绝境, 只有心灵的迷途','Never really desperate, only the lost of the soul'],
+                        strings: ['有时，可能脆弱得一句话就泪流满面；有时，也发现自己咬着牙走了很长的路','Sometimes, I may be weak a word on the tears;Sometimes I find myself walking a long way through clenched teeth'],
                         startDelay: 300,
                         typeSpeed: 100,
                         loop: true,
@@ -363,16 +363,21 @@
                     <div class="post-statis col l4 hide-on-med-and-down" data-aos="zoom-in-right">
                         
 <div class="statis">
-    <span class="count"><a href="/">2</a></span>
+    <span class="count"><a href="/">3</a></span>
     <span class="name">Posts</span>
 </div>
 
 
 
+<div class="statis">
+    <span class="count"><a href="/categories">2</a></span>
+    <span class="name">Categories</span>
+</div>
+
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">1</a></span>
+    <span class="count"><a href="/tags">2</a></span>
     <span class="name">Tags</span>
 </div>
 
@@ -388,16 +393,21 @@
                                 <div class="post-statis hide-on-large-only" data-aos="zoom-in-right">
                                     
 <div class="statis">
-    <span class="count"><a href="/">2</a></span>
+    <span class="count"><a href="/">3</a></span>
     <span class="name">Posts</span>
 </div>
 
 
 
+<div class="statis">
+    <span class="count"><a href="/categories">2</a></span>
+    <span class="name">Categories</span>
+</div>
+
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">1</a></span>
+    <span class="count"><a href="/tags">2</a></span>
     <span class="name">Tags</span>
 </div>
 
@@ -431,10 +441,6 @@
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
-
 
                                 </div>
                             </div>
@@ -466,10 +472,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 
                         </div>
@@ -537,7 +539,7 @@
                 name: 'Number of posts',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,0,0,0,0,0,2],
+                data: [0,0,0,0,0,0,0,0,0,0,0,0,3],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -579,7 +581,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [],
+                data: [{"name":"bootstrap","value":1},{"name":"xml","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -603,7 +605,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["-test"]
+                data: ["test","xml ， springboot ， JAXBContext"]
             }
         ],
         yAxis: [
@@ -616,7 +618,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [1],
+                data: [1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -787,7 +789,13 @@
             
             
             <a href="/tags/test/">
-                <span class="chip center-align waves-effect waves-light chip-default">-test</span>
+                <span class="chip center-align waves-effect waves-light chip-default">test</span>
+            </a>
+            
+            
+            
+            <a href="/tags/xml-%EF%BC%8C-springboot-%EF%BC%8C-JAXBContext/">
+                <span class="chip center-align waves-effect waves-light chip-default">xml ， springboot ， JAXBContext</span>
             </a>
             
             
@@ -915,7 +923,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">111</span>&nbsp;字
+                class="white-color">524</span>&nbsp;字
             
             
             
@@ -962,10 +970,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
     </div>
@@ -1037,6 +1041,11 @@ $(function () {
 
     
 
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="150"
+        src="/libs/background/canvas-nest.js"></script>
     
 
     
