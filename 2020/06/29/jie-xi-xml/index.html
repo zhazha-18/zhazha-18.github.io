@@ -468,35 +468,35 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>创建时间:&nbsp;&nbsp;
                     2020-06-29
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2020-06-29
+                    <i class="far fa-calendar-check fa-fw"></i>更新时间:&nbsp;&nbsp;
+                    2020-06-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
-                    <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    363
+                    <i class="far fa-file-word fa-fw"></i>字数:&nbsp;&nbsp;
+                    366
                 </div>
                 
 
                 
                 <div class="info-break-policy">
-                    <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
+                    <i class="far fa-clock fa-fw"></i>阅读时间:&nbsp;&nbsp;
                     1 Min
                 </div>
                 
 
                 
                     <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>Read Count:&nbsp;&nbsp;
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
                         <span id="busuanzi_value_page_pv"></span>
                     </div>
 				
@@ -505,13 +505,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>做webservice的时候要解析xml，通过查找发先JAXB是可以解析xml并转换成对象的</p>
+                <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><p>做webservice的时候要解析xml，通过查找发现JAXB是可以解析xml并转换成对象的</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@XmlAccessorType</span><span class="token punctuation">(</span>XmlAccessType<span class="token punctuation">.</span>FIELD<span class="token punctuation">)</span>
 <span class="token annotation punctuation">@XmlType</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"标签名称"</span><span class="token punctuation">,</span> propOrder<span class="token operator">=</span><span class="token punctuation">{</span>属性名称<span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token annotation punctuation">@XmlRootElement</span>
+<span class="token annotation punctuation">@XmlRootElement</span>        
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OrderRequestMsgHeader</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">/**
-      *@XmlElement里面的name跟xml里面的标签对应
+      *@XmlElement里面的name跟xml里面节点内的标签对应
       */</span>
     <span class="token annotation punctuation">@XmlElement</span><span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">"msgHeader"</span><span class="token punctuation">,</span> required<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">)</span>
     <span class="token keyword">private</span> MsgHeader msgHeader<span class="token punctuation">;</span>
@@ -580,7 +580,7 @@
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        作者:
                     </i>
                 </span>
                 <span class="reprint-info">
@@ -590,22 +590,23 @@
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        本文链接:
                     </i>
                 </span>
                 <span class="reprint-info">
                     <a href="http://wjpas.top/2020/06/29/jie-xi-xml/">http://wjpas.top/2020/06/29/jie-xi-xml/</a>
                 </span>
             </div>
+			
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
                     All articles in this blog are used except for special statements
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="ddd" target="_blank">CC BY 4.0</a>
                     reprint polocy. If reproduced, please indicate source
                     <a href="/about" target="_blank">王先生-</a>
                     !
@@ -651,7 +652,7 @@
     
 
 </div>
-
+	<!-- 微信分享 -->
                 </div>
             </div>
             
@@ -755,7 +756,7 @@
     <div id="rewardModal" class="modal">
         <div class="modal-content">
             <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <h4 class="reward-title">赏</h4>
             <div class="reward-content">
                 <div class="reward-tabs">
                     <ul class="tabs row">
@@ -763,7 +764,7 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/reward/ali.png" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
                         <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
@@ -779,7 +780,7 @@
         $('.tabs').tabs();
     });
 </script>
-
+		<!-- /*打赏*/ -->
             
         </div>
     </div>
@@ -828,48 +829,41 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2020/06/29/jie-xi-xml/">
+                <a href="/2020/06/30/integer-han-shu/">
                     <div class="card-image">
                         
+                        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3995073927,3598178723&fm=26&gp=0.jpg" class="responsive-img" alt="Integer函数">
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="解析Xml">
-                        
-                        <span class="card-title">解析Xml</span>
+                        <span class="card-title">Integer函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            使用JAXBContext将Xml转换成对象
+                            parseInt函数
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-29
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-30
+                        </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/xml/" class="post-category">
-                                    xml
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            王先生-
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/xml-%EF%BC%8C-springboot-%EF%BC%8C-JAXBContext/">
-                        <span class="chip bg-color">xml ， springboot ， JAXBContext</span>
+                    <a href="/tags/parseInt/">
+                        <span class="chip bg-color">parseInt</span>
                     </a>
                     
                 </div>
@@ -930,6 +924,43 @@
 
 </div>
 
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + 'From: 小宅博客<br />'
+            + 'Author: 王先生-<br />'
+            + 'Link: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
 
 
 <!-- 代码块功能依赖 -->
@@ -1124,7 +1155,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">524</span>&nbsp;字
+                class="white-color">1.6k</span>&nbsp;字
             
             
             

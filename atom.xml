@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wjpas.top/"/>
-  <updated>2020-06-29T02:25:31.449Z</updated>
+  <updated>2020-07-01T10:21:45.704Z</updated>
   <id>http://wjpas.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>解析Xml</title>
-    <link href="http://wjpas.top/2020/06/29/jie-xi-xml/"/>
-    <id>http://wjpas.top/2020/06/29/jie-xi-xml/</id>
-    <published>2020-06-29T02:15:12.000Z</published>
-    <updated>2020-06-29T02:25:31.449Z</updated>
+    <title>Date类型转换，获取时间差</title>
+    <link href="http://wjpas.top/2020/07/01/date-lei-xing-zhuan-huan-huo-qu-shi-jian-chai/"/>
+    <id>http://wjpas.top/2020/07/01/date-lei-xing-zhuan-huan-huo-qu-shi-jian-chai/</id>
+    <published>2020-07-01T10:18:30.000Z</published>
+    <updated>2020-07-01T10:21:45.704Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,86 @@
       
         
         
-          &lt;h4 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h4&gt;&lt;p&gt;做webservice的时候要解析xml，通过查找发先JAXB是可以解析xml并转换成对象的&lt;/p&gt;
+          &lt;h5 id=&quot;Date和String类型互相转化：&quot;&gt;&lt;a href=&quot;#Date和String类型互相转化：&quot; class=&quot;headerlink&quot; title=&quot;Date和String类型互相转化：&quot;&gt;&lt;/a&gt;Date和String类型互相转化：&lt;/h5&gt;&lt;pre
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="java" scheme="http://wjpas.top/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java正则匹配是否为时间格式</title>
+    <link href="http://wjpas.top/2020/06/30/java-zheng-ze-pi-pei-shi-fou-wei-shi-jian-ge-shi/"/>
+    <id>http://wjpas.top/2020/06/30/java-zheng-ze-pi-pei-shi-fou-wei-shi-jian-ge-shi/</id>
+    <published>2020-06-30T09:17:23.000Z</published>
+    <updated>2020-07-02T02:05:27.414Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;使用正则表达式判断&quot;&gt;&lt;a href=&quot;#使用正则表达式判断&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="java,正则" scheme="http://wjpas.top/tags/java-%E6%AD%A3%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Integer函数</title>
+    <link href="http://wjpas.top/2020/06/30/integer-han-shu/"/>
+    <id>http://wjpas.top/2020/06/30/integer-han-shu/</id>
+    <published>2020-06-30T07:05:09.000Z</published>
+    <updated>2020-07-02T02:19:34.252Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Integer.parseInt()函数：将字符串参数解析为带符号的十进制整数，返回由十进制参数表示的整数值。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;简单点就是将String类型的数字，转换成int类型&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="parseInt" scheme="http://wjpas.top/tags/parseInt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>解析Xml</title>
+    <link href="http://wjpas.top/2020/06/29/jie-xi-xml/"/>
+    <id>http://wjpas.top/2020/06/29/jie-xi-xml/</id>
+    <published>2020-06-29T02:15:12.000Z</published>
+    <updated>2020-06-30T01:55:42.039Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;定义&lt;/h4&gt;&lt;p&gt;做webservice的时候要解析xml，通过查找发现JAXB是可以解析xml并转换成对象的&lt;/p&gt;
 &lt;pre class=&quot;
         
       
